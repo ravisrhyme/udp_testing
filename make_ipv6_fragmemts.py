@@ -17,7 +17,7 @@ def make_ipv6_fragments():
 	payload = 'ravikiranc' * 1000
 	pkt = IPv6(src=sip,dst=dip)/IPv6ExtHdrFragment(offset = 0, id=12345)/UDP(sport=1500,dport=1501)/payload
 
-	frags = fragment6(pkt,1000) # 1000 is the intended size of each packet
+	frags = fragment6(pkt,1000) # 1000 is the intended size of each fragment
 
 	counter = 1
 
